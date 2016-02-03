@@ -7,19 +7,25 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
+	
+	@IBOutlet weak var monsterImg: MonsterImg!
+	@IBOutlet weak var foodImg: DragImg!
+	@IBOutlet weak var heartImg: DragImg!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		foodImg.dropTarget = monsterImg
+		heartImg.dropTarget = monsterImg
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDropped:", name: "onTargetDropped", object: nil)
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	
+	func itemDropped(notif: AnyObject) {
+		print("item dropped on character")
 	}
-
-
 }
 
