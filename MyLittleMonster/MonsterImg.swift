@@ -10,23 +10,40 @@ import Foundation
 import UIKit
 
 class MonsterImg: UIImageView {
-	override init(frame: CGRect) {
+    
+    var name: String!
+    var idleImage: String!
+    var deadImage: String!
+    
+    override init(frame: CGRect) {
 		super.init(frame: frame)
-	}
+ 	}
 	
-	required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		playIdleAnimation()
-	}
+    }
+    
+    func setMonster(name: String) {
+        self.name = name
+        
+        if name == "Golem" {
+            self.idleImage = "idle"
+            self.deadImage = "dead"
+            
+        } else if name == "BabyGolem" {
+            self.idleImage = "baby"
+            self.deadImage = "faint"
+        }
+    }
 	
-	func playIdleAnimation() {
+    func playIdleAnimation(monsterImg: String) {
 		
-		self.image = UIImage(named: "idle1")
+		self.image = UIImage(named: monsterImg + "1")
 		self.animationImages = nil
 
 		var imgArray = [UIImage]()
 		for var x = 1; x <= 4; x++ {
-			let img = UIImage(named: "idle\(x)")
+			let img = UIImage(named: monsterImg + "\(x)")
 			imgArray.append(img!)
 		}
 
@@ -36,14 +53,14 @@ class MonsterImg: UIImageView {
 		self.startAnimating()
 	}
 	
-	func playDeathAnimation() {
+    func playDeathAnimation(deadImg: String) {
 
-		self.image = UIImage(named: "dead5")
+		self.image = UIImage(named: deadImg + "5")
 		self.animationImages = nil
 		
 		var imgArray = [UIImage]()
 		for var x = 1; x <= 5; x++ {
-			let img = UIImage(named: "dead\(x)")
+			let img = UIImage(named: deadImg + "\(x)")
 			imgArray.append(img!)
 		}
 		

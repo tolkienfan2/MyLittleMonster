@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		457B7DC41C718F650045ED59 /* coins.wav in Resources */ = {isa = PBXBuildFile; fileRef = 457B7DC31C718F650045ED59 /* coins.wav */; };
 		45A9B7051C61152300B4AAD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9B7041C61152300B4AAD8 /* AppDelegate.swift */; };
 		45A9B7071C61152300B4AAD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9B7061C61152300B4AAD8 /* ViewController.swift */; };
 		45A9B70A1C61152300B4AAD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A9B7081C61152300B4AAD8 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		457B7DC31C718F650045ED59 /* coins.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coins.wav; sourceTree = "<group>"; };
 		45A9B7011C61152300B4AAD8 /* MyLittleMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLittleMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A9B7041C61152300B4AAD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45A9B7061C61152300B4AAD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,17 +72,18 @@
 			children = (
 				45A9B7041C61152300B4AAD8 /* AppDelegate.swift */,
 				45A9B7061C61152300B4AAD8 /* ViewController.swift */,
+				45A9B7161C61662A00B4AAD8 /* DragImage.swift */,
+				45D1BC341C62782A008B313E /* MonsterImg.swift */,
 				45A9B7081C61152300B4AAD8 /* Main.storyboard */,
-				45A9B70B1C61152300B4AAD8 /* Assets.xcassets */,
 				45A9B70D1C61152300B4AAD8 /* LaunchScreen.storyboard */,
+				45A9B70B1C61152300B4AAD8 /* Assets.xcassets */,
 				45A9B7101C61152300B4AAD8 /* Info.plist */,
 				45D1BC361C628CEA008B313E /* bite.wav */,
+				457B7DC31C718F650045ED59 /* coins.wav */,
 				45D1BC371C628CEA008B313E /* cave-music.mp3 */,
 				45D1BC381C628CEA008B313E /* death.wav */,
 				45D1BC391C628CEA008B313E /* heart.wav */,
 				45D1BC3A1C628CEA008B313E /* skull.wav */,
-				45A9B7161C61662A00B4AAD8 /* DragImage.swift */,
-				45D1BC341C62782A008B313E /* MonsterImg.swift */,
 			);
 			path = MyLittleMonster;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457B7DC41C718F650045ED59 /* coins.wav in Resources */,
 				45D1BC3F1C628CEA008B313E /* skull.wav in Resources */,
 				45D1BC3B1C628CEA008B313E /* bite.wav in Resources */,
 				45D1BC3D1C628CEA008B313E /* death.wav in Resources */,
